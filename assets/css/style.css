@@ -49,15 +49,20 @@ h6 {
   transition: all 0.4s;
 }
 
+.fluid {
+  height: 85%;
+  width: 99%;
+}
+
 .back-to-top i {
   font-size: 28px;
-  color: #fff;
+  color: #88725b;
   line-height: 0;
 }
 
 .back-to-top:hover {
   background: #e9607a;
-  color: #fff;
+  color: #88725b;
 }
 
 .back-to-top.active {
@@ -72,30 +77,59 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+  background-color: #88725b;
+
 }
 
 #header .logo {
   font-size: 34px;
 
-  margin: 0;
+  margin-left: 69px;
   padding: 0;
   line-height: 1;
   font-weight: 600;
   letter-spacing: 1px;
-  text-transform: uppercase;
+
+}
+
+.fixed {
+  visibility: visible;
 }
 
 #header .logo a {
-  color: #fff;
+  color: #111;
+  font-size: 14px;
+  margin-bottom: 10px;
+
 }
 
 #header .logo img {
-  max-height: 40px;
+  margin-left: 24px;
+  max-height: 84px;
+
+}
+
+#header .topText {
+  align-items: end;
+  justify-content: right;
+  font-size: 18px;
+  color: #111;
+  ;
+}
+
+#header .topTextDiv {
+  display: flex;
+  font-size: 1px;
+  color: #111;
+  justify-content: end;
+
+  ;
 }
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(0, 0, 0, 0.9);
+
+  background: #88725b;
   padding: 12px 0;
 }
 
@@ -132,7 +166,7 @@ h6 {
   align-items: center;
   justify-content: space-between;
   font-family: "Poppins", sans-serif;
-  color: #fff;
+  color: #f0f0f0;
   font-size: 15px;
   padding: 0 4px;
   white-space: nowrap;
@@ -172,7 +206,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #fff;
+  color: #f0f0f0;
 }
 
 .navbar .dropdown ul {
@@ -185,7 +219,7 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #fff;
+  background: #88725b;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
@@ -244,7 +278,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: #020202;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -255,6 +289,10 @@ h6 {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
+  }
+
+  .topTextDiv {
+    display: none;
   }
 
   .navbar ul {
@@ -288,7 +326,7 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: #88725b;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -329,7 +367,7 @@ h6 {
   z-index: 99;
   opacity: 1;
   visibility: visible;
-  background: #fff;
+  background: #88725b;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
@@ -361,14 +399,15 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/jeffrey-swanson-T72-kQyQxtA-unsplash.jpg") bottom center;
+  background: url("../img/us-cap-rate-survey-h1-2023.jpg") bottom center;
   background-size: cover;
   position: relative;
+
 }
 
 #hero:before {
   content: "";
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -392,7 +431,7 @@ h6 {
 
 #hero h3 {
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: #88725b;
   font-size: 26px;
   padding: 10px 30px;
   margin-bottom: 30px;
@@ -405,13 +444,14 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   /* text-transform: uppercase; */
-  color: #fff;
+  color: #88725b;
 }
 
 #hero h2 {
-  color: #eee;
+  color: #111;
   margin-bottom: 40px;
   font-size: 24px;
+  font-weight: bolder;
 }
 
 #hero .btn-get-started {
@@ -424,8 +464,8 @@ h6 {
   padding: 8px 30px 9px 30px;
   border-radius: 50px;
   transition: 0.5s;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #88725b;
+  color: #111;
 }
 
 #hero .btn-get-started:hover {
@@ -437,11 +477,27 @@ h6 {
   #hero {
     background-attachment: fixed;
   }
+
+  #header .topTextDiv {
+    display: none;
+  }
+
+  #header .logo {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 768px) {
   #hero h3 {
     font-size: 22px;
+  }
+
+  #header .topTextDiv {
+    display: none;
+  }
+
+  #header .logo {
+    margin-left: 0;
   }
 
   #hero h1 {
@@ -457,6 +513,14 @@ h6 {
 }
 
 @media (max-height: 500px) {
+  #header .topTextDiv {
+    display: none;
+  }
+
+  #header .logo {
+    margin-left: 0;
+  }
+
   #hero {
     height: 150vh;
   }
@@ -517,9 +581,14 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  background-color: #88725b;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
+
 }
 
 .about .content ul {
@@ -568,7 +637,7 @@ section {
 
 .about .content .btn-learn-more:hover {
   background: #e43c5c;
-  color: #fff;
+  color: #88725b;
   text-decoration: none;
 }
 
@@ -577,13 +646,14 @@ section {
 --------------------------------------------------------------*/
 .services {
   padding-bottom: 30px;
+  background-color: #88725b;
 }
 
 .services .icon-box {
   padding: 60px 30px;
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: #88725b;
   box-shadow: 2px 0 35px 0 rgba(68, 88, 144, 0.12);
   transition: all 0.3s ease-in-out;
   border-radius: 8px;
@@ -638,17 +708,18 @@ section {
 
 .services .icon-box:hover .title a,
 .services .icon-box:hover .description {
-  color: #fff;
+  color: #88725b;
 }
 
 .services .icon-box:hover .icon i {
-  color: #fff;
+  color: #88725b;
 }
 
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
 .features {
+  background-color: #88725b;
   padding-top: 20px;
 }
 
@@ -687,19 +758,21 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), url("../img/jeffrey-swanson-T72-kQyQxtA-unsplash.jpg") center center;
+  /* linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.8)), */
+  background: url("../img/us-cap-rate-survey-h1-2023.jpg") center center;
   background-size: cover;
   padding: 60px 0;
+
 }
 
 .cta h3 {
-  color: #fff;
+  color: #88725b;
   font-size: 28px;
   font-weight: 700;
 }
 
 .cta p {
-  color: #fff;
+  color: #88725b;
 }
 
 .cta .cta-btn {
@@ -713,8 +786,8 @@ section {
   border-radius: 25px;
   transition: 0.5s;
   margin-top: 10px;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #88725b;
+  color: #88725b;
 }
 
 .cta .cta-btn:hover {
@@ -731,6 +804,10 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+.portfolio {
+  background-color: #88725b;
+}
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 25px auto;
@@ -755,7 +832,7 @@ section {
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #fff;
+  color: #88725b;
   background: #e43c5c;
 }
 
@@ -792,12 +869,12 @@ section {
 
 .portfolio .portfolio-item .portfolio-info h4 {
   font-size: 18px;
-  color: #fff;
+  color: #88725b;
   font-weight: 600;
 }
 
 .portfolio .portfolio-item .portfolio-info p {
-  color: #fff;
+  color: #88725b;
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -849,7 +926,7 @@ section {
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #fff;
+  background-color: #88725b;
   opacity: 1;
   border: 1px solid #e43c5c;
 }
@@ -898,6 +975,10 @@ section {
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
+.pricing {
+  background-color: #88725b;
+}
+
 .pricing .box {
   padding: 20px;
   background: #f9f9f9;
@@ -981,7 +1062,7 @@ section {
 
 .pricing .box .btn-buy:hover {
   background: #e43c5c;
-  color: #fff;
+  color: #88725b;
 }
 
 .pricing .recommended {
@@ -990,7 +1071,7 @@ section {
 
 .pricing .recommended .btn-buy {
   background: #e43c5c;
-  color: #fff;
+  color: #88725b;
 }
 
 .pricing .recommended .btn-buy:hover {
@@ -1016,6 +1097,7 @@ section {
 --------------------------------------------------------------*/
 .faq {
   padding: 60px 0;
+  background-color: #88725b;
 }
 
 .faq .faq-list {
@@ -1086,7 +1168,7 @@ section {
 # Team
 --------------------------------------------------------------*/
 .team {
-  background: #fff;
+  background: #88725b;
   padding: 60px 0;
 }
 
@@ -1095,7 +1177,7 @@ section {
   overflow: hidden;
   text-align: center;
   border-radius: 5px;
-  background: #fff;
+  background: #88725b;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -1173,9 +1255,14 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  background-color: #88725b;
+}
+
 .contact .info {
+
   width: 100%;
-  background: #fff;
+  background: #88725b;
 }
 
 .contact .info i {
@@ -1200,11 +1287,15 @@ section {
   color: #493c3e;
 }
 
+#col-lg-4 {
+  color: #ffffff;
+}
+
 .contact .info p {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #816a6e;
+  color: #fff;
 }
 
 .contact .info .email,
@@ -1216,12 +1307,12 @@ section {
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
   background: #e43c5c;
-  color: #fff;
+  color: #88725b;
 }
 
 .contact .php-email-form {
   width: 100%;
-  background: #fff;
+  background: #88725b;
 }
 
 .contact .php-email-form .form-group {
@@ -1230,7 +1321,7 @@ section {
 
 .contact .php-email-form .error-message {
   display: none;
-  color: #fff;
+  color: #88725b;
   background: #ed3c0d;
   text-align: left;
   padding: 15px;
@@ -1243,7 +1334,7 @@ section {
 
 .contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
+  color: #88725b;
   background: #18d26e;
   text-align: center;
   padding: 15px;
@@ -1252,7 +1343,7 @@ section {
 
 .contact .php-email-form .loading {
   display: none;
-  background: #fff;
+  background: #88725b;
   text-align: center;
   padding: 15px;
 }
@@ -1294,7 +1385,7 @@ section {
   background: #e43c5c;
   border: 0;
   padding: 10px 28px;
-  color: #fff;
+  color: #88725b;
   transition: 0.4s;
   border-radius: 50px;
 }
@@ -1441,7 +1532,7 @@ section {
 .blog .entry .entry-content .read-more a {
   display: inline-block;
   background: #e43c5c;
-  color: #fff;
+  color: #88725b;
   padding: 6px 20px;
   transition: 0.3s;
   font-size: 14px;
@@ -1719,7 +1810,7 @@ section {
 
 .blog .blog-pagination li.active a,
 .blog .blog-pagination li:hover a {
-  color: #fff;
+  color: #88725b;
 }
 
 .blog .sidebar {
@@ -1742,7 +1833,7 @@ section {
 }
 
 .blog .sidebar .search-form form {
-  background: #fff;
+  background: #88725b;
   border: 1px solid #ddd;
   padding: 3px 10px;
   position: relative;
@@ -1766,7 +1857,7 @@ section {
   padding: 0 15px;
   margin: -1px;
   background: #e43c5c;
-  color: #fff;
+  color: #88725b;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
   line-height: 0;
@@ -1860,7 +1951,7 @@ section {
 }
 
 .blog .sidebar .tags ul a:hover {
-  color: #fff;
+  color: #88725b;
   border: 1px solid #e43c5c;
   background: #e43c5c;
 }
@@ -1883,7 +1974,7 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #fff;
+  background: #88725b;
 }
 
 #footer .footer-top .footer-contact {
@@ -1903,7 +1994,7 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Nunito", sans-serif;
-  color: #777777;
+  color: #fff;
 }
 
 #footer .footer-top h4 {
@@ -1942,7 +2033,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #777777;
+  color: #fff;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
@@ -1967,7 +2058,7 @@ section {
 
 #footer .footer-newsletter form {
   margin-top: 30px;
-  background: #fff;
+  background: #88725b;
   padding: 6px 10px;
   position: relative;
   border-radius: 50px;
@@ -1991,7 +2082,7 @@ section {
   font-size: 15px;
   padding: 0 22px;
   background: #e43c5c;
-  color: #fff;
+  color: #88725b;
   transition: 0.3s;
   border-radius: 50px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -2011,7 +2102,7 @@ section {
   font-size: 18px;
   display: inline-block;
   background: #e43c5c;
-  color: #fff;
+  color: #88725b;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -2024,6 +2115,6 @@ section {
 
 #footer .social-links a:hover {
   background: #d01d3f;
-  color: #fff;
+  color: #88725b;
   text-decoration: none;
 }
