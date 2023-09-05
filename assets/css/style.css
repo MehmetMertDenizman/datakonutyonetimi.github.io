@@ -428,6 +428,13 @@ h6 {
   flex-direction: column;
   text-align: center;
   padding: 0 15px;
+
+
+}
+
+.back h2 {
+  background-color: #bc9b6b;
+
 }
 
 #hero h3 {
@@ -452,6 +459,7 @@ h6 {
   margin-bottom: 40px;
   font-size: 24px;
   font-weight: bolder;
+  border-radius: 90px;
 }
 
 #hero .btn-get-started {
@@ -459,7 +467,7 @@ h6 {
   /* text-transform: uppercase; */
   font-weight: 400;
   font-size: 13px;
-  background: #e43c5c;
+  background: #fff;
 
   letter-spacing: 1px;
   display: inline-block;
@@ -636,7 +644,7 @@ section {
 }
 
 .about .content .btn-learn-more:hover {
-  background: #e43c5c;
+  background: #f8f8f8;
   text-decoration: none;
 }
 
