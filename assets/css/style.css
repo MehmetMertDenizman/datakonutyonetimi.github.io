@@ -99,7 +99,7 @@ h6 {
 }
 
 #header .logo a {
-  color: #111;
+  color: #fdfdfd;
   font-size: 14px;
   margin-bottom: 10px;
 
@@ -115,17 +115,26 @@ h6 {
   align-items: end;
   justify-content: right;
   font-size: 18px;
-  color: #111;
+  color: #ffffff;
   ;
 }
 
-#header .topTextDiv {
+.headerContact a {
+  font-size: 18px;
+  color: #bc9b6b;
+}
+
+.headerContact a span {
+  color: #fff;
+}
+
+.topTextDiv a {
   display: flex;
-  font-size: 1px;
-  color: #111;
+  font-size: 111px;
+  color: #f70c0c;
   justify-content: end;
 
-  ;
+
 }
 
 #header.header-scrolled,
@@ -293,9 +302,7 @@ h6 {
     display: block;
   }
 
-  .topTextDiv {
-    display: none;
-  }
+
 
   .navbar ul {
     display: none;
@@ -488,9 +495,8 @@ h6 {
     background-attachment: fixed;
   }
 
-  #header .topTextDiv {
-    display: none;
-  }
+
+
 
   #header .logo {
     margin-left: 0;
@@ -502,12 +508,12 @@ h6 {
     font-size: 22px;
   }
 
-  #header .topTextDiv {
-    display: none;
-  }
+
 
   #header .logo {
     margin-left: 0;
+
+
   }
 
   #hero h1 {
@@ -523,12 +529,13 @@ h6 {
 }
 
 @media (max-height: 500px) {
-  #header .topTextDiv {
-    display: none;
-  }
 
   #header .logo {
     margin-left: 0;
+  }
+
+  .headerContact a {
+    visibility: visible;
   }
 
   #hero {
@@ -1412,6 +1419,10 @@ section {
 @media (max-width: 992px) {
   .breadcrumbs {
     margin-top: 50px;
+  }
+
+  .headerContact a {
+    visibility: visible;
   }
 }
 
